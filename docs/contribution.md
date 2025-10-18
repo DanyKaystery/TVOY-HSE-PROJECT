@@ -26,14 +26,14 @@
 Мы используем следующие префиксы для именования веток:
 
 * **`feature/`**: Для добавления новой "фичи" или артефакта ДЗ.
-    * `feature/questionnaire-draft`
-    * `feature/meeting-protocol`
+  * `feature/questionnaire-draft`
+  * `feature/meeting-protocol`
 * **`docs/`**: Для любых изменений в документации (включая этот файл).
-    * `docs/update-contribution-rules`
+  * `docs/update-contribution-rules`
 * **`fix/`**: Для исправления ошибок, опечаток или проблем.
-    * `fix/typo-in-questionnaire`
+  * `fix/typo-in-questionnaire`
 * **`ci/`**: Для настройки GitHub Actions (CI/CD).
-    * `ci/add-markdown-linter`
+  * `ci/add-markdown-linter`
 
 ## 4. Стиль именования коммитов
 
