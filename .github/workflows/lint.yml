@@ -1,0 +1,29 @@
+name: Markdown Linter # Название нашего workflow
+
+# Указываем, когда запускать эту проверку:
+# Запускать при любом Pull Request, который идет в main
+on:
+  pull_request:
+    branches: [ main ]
+
+# Описываем саму задачу (job)
+jobs:
+  lint:
+    name: Run Markdown Lint Check # Имя задачи
+    runs-on: ubuntu-latest # На какой системе запускать
+    steps:
+
+      # Шаг 1: Скачать код из нашей ветки
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Шаг 2: Запустить сам линтер (проверку)
+      - name: Run Markdown Linter
+        uses: DavidAnson/markdownlint-cli@v0.32.2
+        with:
+          # Говорим линтеру, какие файлы проверять:
+          # Все .md файлы в корне, в /docs и в /content
+          globs: |
+            *.md
+            docs/*.md
+            content/*.md
