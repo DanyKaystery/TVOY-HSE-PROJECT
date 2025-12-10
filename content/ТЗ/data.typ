@@ -1,0 +1,35 @@
+#let data = (
+  // Project code
+  // Example: "01-01"
+  // You can find it here: https://ru-ikt.ru/reestrpo
+  code: "05-01",
+
+  // Project name
+  // Example: "Учимся закупать ТОН"
+  project_name: "Мобильное приложение для повышения продуктивности",
+  // Example: "Learning how to purchase TON"
+  project_name_english: "Mobile productivity application",
+  short_name: "TVOY",
+
+  // Students
+  // Example: 
+  //  (name: "А. В. Васюков", group: "БПИ235"),
+  //  (name: "Л. И. Лившиц", group: "БПИ235"),
+  // You can write 1 or more students
+  students: (
+    (name: "А. В. Васюков", group: "БПИ235"),
+    (name: "Д. Дж. Трамп", group: "\"Республиканская партия\""),
+    (name: "П. Дуров", group: "Основатель Telegram"),
+    (name: "В. Зеленский", group: "Президент Украины"),
+  ),
+
+  // Agreed
+  // Example: "П. В. Дуров"
+  agreed_by_name: "П. В. Дуров",
+  // Example: "Основатель социальной сети \"ВКонтакте\" и мессенджера Telegram"
+  agreed_by_position: "Основатель социальной сети \"ВКонтакте\" и мессенджера Telegram",
+
+  // Approved
+  approved_by_name: "Н. А. Павлочев",
+  approved_by_position: "Академический руководитель образовательной программы \"Программная инженерия\",\n старший преподаватель департамента программной инженерии",
+)
