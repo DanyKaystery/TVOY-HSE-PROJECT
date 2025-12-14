@@ -12,24 +12,26 @@
   short_name: "TVOY",
 
   // Students
-  // Example: 
-  //  (name: "А. В. Васюков", group: "БПИ235"),
-  //  (name: "Л. И. Лившиц", group: "БПИ235"),
-  // You can write 1 or more students
   students: (
-    (name: "А. В. Васюков", group: "БПИ235"),
-    (name: "Д. Дж. Трамп", group: "\"Республиканская партия\""),
-    (name: "П. Дуров", group: "Основатель Telegram"),
-    (name: "В. Зеленский", group: "Президент Украины"),
+    (name: "Д. О. Марьин", group: "БПИ243"),
+    (name: "А. В. Михайлов", group: "БПИ243"),
+    (name: "Д. С. Матусевич", group: "БПИ243"),
+    (name: "Т. Р. Тупицин", group: "БПИ243"),
   ),
 
   // Agreed
-  // Example: "П. В. Дуров"
-  agreed_by_name: "П. В. Дуров",
-  // Example: "Основатель социальной сети \"ВКонтакте\" и мессенджера Telegram"
-  agreed_by_position: "Основатель социальной сети \"ВКонтакте\" и мессенджера Telegram",
+  //agreed_by_name: "Н. С. Белова",
+  //agreed_by_position: "Кандидат технических наук, доцент департамента программной инженерии ФКН НИУ ВШЭ",
 
   // Approved
-  approved_by_name: "Н. А. Павлочев",
-  approved_by_position: "Академический руководитель образовательной программы \"Программная инженерия\",\n старший преподаватель департамента программной инженерии",
+  //approved_by_name: "Н. А. Павлочев",
+  //approved_by_position: "Академический руководитель образовательной программы \"Программная инженерия\",\n старший преподаватель департамента программной инженерии",
+
+    // Agreed
+  agreed_by_name: "Agile Minds",
+  agreed_by_position: "Заказчик",
+
+  // Approved
+  approved_by_name: "AbsoluteVision",
+  approved_by_position: "Исполнитель",
 )
