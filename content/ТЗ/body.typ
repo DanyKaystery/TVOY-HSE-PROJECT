@@ -17,9 +17,9 @@
 
 Целевой аудиторией программного продукта являются две ключевые группы пользователей:
 
-Школьники и студенты (15–25 лет), нуждающиеся в структурировании учебного процесса, подготовке к экзаменам и формировании дисциплины.
+Школьники и студенты (15-25 лет), нуждающиеся в структурировании учебного процесса, подготовке к экзаменам и формировании дисциплины.
 
-Молодые специалисты и осознанные пользователи (20–40 лет), стремящиеся к Work-Life Balance, формированию полезных привычек и достижению долгосрочных целей.
+Молодые специалисты и осознанные пользователи (20-40 лет), стремящиеся к Work-Life Balance, формированию полезных привычек и достижению долгосрочных целей.
 
 Исходя из вышесказанного, областью применения прикладной компьютерной программы «TVOY» является сфера персональной эффективности и управления временем.
 
@@ -36,7 +36,7 @@
 
 Условное обозначение темы разработки -- «TVOY».
 
-Программа выполнена в рамках темы домашнего задания «Мобильное приложение для повышения продуктивности «TVOY» (True Version Of Yourself)» в соответствии с учебным планом подготовки бакалавров (НИУ ВШЭ, факультет компьютерных наук) по направлению «Программная инженерия».
+Программа выполнена в рамках домашнего задания «Мобильное приложение для повышения продуктивности «TVOY» (True Version Of Yourself)» в соответствии с учебным планом подготовки бакалавров (НИУ ВШЭ, Факультет компьютерных наук) по направлению «Программная инженерия».
 
 
 
@@ -96,14 +96,14 @@
 Удаление аккаунта: Приложение должно предоставлять пользователю возможность полного удаления учетной записи и всех связанных с ней данных (в соответствии с политикой конфиденциальности).
 
 Туториал: При первом входе должно отображаться интерактивное руководство (не более 5 экранов) с возможностью пропуска.
-
+В нём должно быть обучение по созданию и редактированию задач, профиля, также там рассказывается о фишках и ключевых особенностях приложения.
 2. Подсистема «Управление задачами (Task Management)»
 
 Создание задач: Приложение должно позволять создавать задачу со следующими ограничениями входных данных:
 - Название: Обязательное поле. Длина от 1 до 255 символов. Поддержка всех символов UTF-8.
 - Описание: Опциональное поле. Максимальная длина 2000 символов.
-- Приоритет: Выбор одного значения из списка: [Низкий (по умолчанию), Средний, Высокий]. Влияет на сортировку списка и начисление наград.
-- Лимиты: Максимальное количество активных (невыполненных) задач для одного пользователя — 10 000. При превышении лимита блокировать кнопку создания с выводом уведомления Toast/Snackbar.
+- Приоритет: Выбор одного значения из списка: [Низкий, Средний (по умолчанию), Высокий]. Влияет на сортировку списка и начисление наград.
+- Лимиты: Максимальное количество активных (невыполненных) задач для одного пользователя - 10 000. При превышении лимита блокировать кнопку создания с выводом уведомления Toast/Snackbar.
 
 Редактирование задач: Пользователь должен иметь возможность изменять любые атрибуты созданной задачи.
 
@@ -130,9 +130,9 @@
 4. Подсистема «Мотивация и геймификация»
 
 Алгоритм подбора цитат: При запуске приложения (сессия OnStart) система должна рассчитывать «Коэффициент продуктивности» ($K_p$) за последние 3 дня по формуле: $ K_p = "Выполнено" / "Запланировано" times 100% $.
-- Если $ K_p < 30% $ — отображать цитаты из категории «Поддержка/Анти-стресс».
-- Если $ 30% <= K_p <= 80% $ — отображать цитаты из категории «Дисциплина».
-- Если $ K_p > 80% $ — отображать цитаты из категории «Успех/Амбиции».
+- Если $ K_p < 30% $ - отображать цитаты из категории «Поддержка/Анти-стресс».
+- Если $ 30% <= K_p <= 80% $ - отображать цитаты из категории «Дисциплина».
+- Если $ K_p > 80% $ - отображать цитаты из категории «Успех/Амбиции».
 
 Начисление валюты («Звездочки»):
 - Задача (Низкий приоритет): +10 ед.
@@ -150,7 +150,7 @@
 
 Долгосрочная статистика: Приложение должно формировать графики продуктивности за неделю и месяц, показывая динамику выполненных задач.
 
-Экспорт данных: Должна быть реализована функция выгрузки статистики пользователя в форматы CSV и XLS.
+Экспорт данных: Должна быть реализована функция выгрузки статистики пользователя в форматы PDF для графиков и другой наглядной информации, а также CSV/XLS для обобщенных числовых данных по дням, месяцам, количеству выполненных задач за определённый выбранный период времени,.
 
 === Требования к организации входных данных
 
@@ -162,13 +162,12 @@
 
 === Требования к организации выходных данных
 
-Выходными данными являются: списки задач, статусы таймера, уведомления, аналитические отчеты и экспортируемые файлы (CSV/XLS).
+Выходными данными являются: списки задач, статусы таймера, уведомления, аналитические отчеты и экспортируемые файлы (PDF).
 
-Графические отчеты должны быть доступны для просмотра на экране устройства, а также экспортироваться в формате PDF (разметка A4) для печати.
+Графические отчеты должны быть доступны для просмотра на экране устройства, а также экспортироваться в формате PDF.
 
 === Требования к временным характеристикам
 
-Требования к временным характеристикам
 Время запуска приложения («холодный старт») не должно превышать 2 секунд на эталонном устройстве (Google Pixel 5 или эквивалент с >300k AnTuTu).
 
 Время отклика интерфейса на действия пользователя (время до первого кадра анимации) не должно превышать 200 мс.
@@ -178,8 +177,14 @@
 === Требования к интерфейсу
 
 Проектирование графического интерфейса пользователя (GUI) должно осуществляться в строгом соответствии с принципами дизайн-системы Material Design 3 (Android) и Human Interface Guidelines (iOS) для обеспечения нативности пользовательского опыта.
-Для Android руководствоваться спецификацией: Material Design 3 [Электронный ресурс]. – Режим доступа: https://m3.material.io/ (дата обращения: 10.12.2025).
-Для iOS руководствоваться спецификацией: Human Interface Guidelines [Электронный ресурс]. – Режим доступа: https://developer.apple.com/design/human-interface-guidelines/ (дата обращения: 10.12.2025).
+
+Для Android руководствоваться спецификацией: Material Design 3 [Электронный ресурс]. 
+
+– Режим доступа: https://m3.material.io/ (дата обращения: 10.12.2025).
+
+Для iOS руководствоваться спецификацией: Human Interface Guidelines [Электронный ресурс]. 
+
+– Режим доступа: https://developer.apple.com/design/human-interface-guidelines/ (дата обращения: 10.12.2025).
 
 Основная навигация приложения должна быть реализована через нижнюю навигационную панель (Bottom Navigation Bar), содержащую строго 4 раздела: «Задачи», «Таймер», «Магазин», «Профиль».
 
@@ -388,7 +393,7 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
 Таблица 1 --  сравнения с аналогами.
 
 #let column_names_1 = (
-    [TVOY],
+    [Forest],
     [Todoist],
     [TickTick],
     [Notion],
@@ -396,7 +401,7 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
     [Singularity],
     [Focus To Do],
     [To Do List],
-    [Forest],
+    [TVOY],
 )
 
 #let plus = table.cell(fill: green.lighten(60%))[+]
@@ -413,18 +418,18 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
         ),
 
         // Блок 1: Создание и редактирование
-        [Создание задач текстом], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Редактирование задачи], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Удаление задачи], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Добавление описания], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Создание подзадачи], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Создание задач текстом], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Редактирование задачи], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Удаление задачи], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Добавление описания], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Создание подзадачи], minus, plus, plus, plus, plus, plus, plus, plus, plus,
 
         // Блок 2: NLP и голос
-        [NLP обработка текста], plus, plus, plus, minus, minus, minus, minus, minus, minus,
-        [Голосовое создание задач], plus, plus, plus, plus, plus, plus, plus, minus, minus,
+        [NLP обработка текста], minus, plus, plus, minus, minus, minus, minus, minus, plus,
+        [Голосовое создание задач], minus, plus, plus, plus, plus, plus, plus, minus, plus,
 
         // Блок 3: Организация
-        [Создание проектов/категорий], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Создание проектов/категорий], minus, plus, plus, plus, plus, plus, plus, plus, plus,
     )
 )
 
@@ -439,15 +444,15 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
 
-        [Добавление метки/тега], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Фильтр по статусу], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Сортировка по дате], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Поиск по названию], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Добавление метки/тега], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Фильтр по статусу], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Сортировка по дате], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Поиск по названию], minus, plus, plus, plus, plus, plus, plus, plus, plus,
 
         // Блок 4: Приоритизация и сроки
-        [Установка приоритета], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Установление срока выполнения], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Повторяющиеся задачи], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Установка приоритета], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Установление срока выполнения], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Повторяющиеся задачи], minus, plus, plus, plus, plus, plus, plus, plus, plus,
         // Блок 5: Отметить выполнение
         [Отметить как выполненную], plus, plus, plus, plus, plus, plus, plus, plus, plus,
     )
@@ -464,18 +469,18 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
 
-        [Отметить как невыполненную], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Отметить как невыполненную], minus, plus, plus, plus, plus, plus, plus, plus, plus,
 
         // Блок 1: Интеграция с календарем
-        [Интеграция с календарем], plus, plus, plus, plus, plus, plus, plus, minus, minus,
+        [Интеграция с календарем], minus, plus, plus, plus, plus, plus, plus, minus, plus,
         [Синхронизация с Google Calendar], minus, plus, plus, plus, plus, plus, minus, minus, minus,
         [Синхронизация с Apple Calendar], minus, plus, plus, plus, plus, plus, minus, minus, minus,
 
         // Блок 2: Установка напоминаний
-        [Установка напоминаний], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Установка напоминаний], minus, plus, plus, plus, plus, plus, plus, plus, plus,
         [Push-уведомления], plus, plus, plus, plus, plus, plus, plus, plus, plus,
-        [Email уведомления], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [In-app уведомления], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Email уведомления], minus, plus, plus, plus, plus, plus, minus, minus, plus,
+        [In-app уведомления], minus, plus, plus, plus, plus, plus, plus, plus, plus,
     )
 )
 
@@ -491,14 +496,14 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
         ),
         // Блок 1: Аналитика и графики
         [Граф эффективности (по месяцам)], plus, plus, plus, plus, plus, plus, minus, minus, plus,
-        [Граф эффективности (по неделям)], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [Граф эффективности (по дням)], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [Круговая диаграмма по категориям], plus, minus, plus, plus, minus, plus, minus, minus, minus,
-        [Столбчатая диаграмма], plus, plus, plus, plus, minus, plus, minus, minus, minus,
+        [Граф эффективности (по неделям)], minus, plus, plus, plus, plus, plus, minus, minus, plus,
+        [Граф эффективности (по дням)], minus, plus, plus, plus, plus, plus, minus, minus, plus,
+        [Круговая диаграмма по категориям], minus, minus, plus, plus, minus, plus, minus, minus, plus,
+        [Столбчатая диаграмма], minus, plus, plus, plus, minus, plus, minus, minus, plus,
 
         // Блок 2: Статистика Pomodoro
         [Статистика Pomodoro-сессий], plus, minus, plus, minus, minus, plus, plus, minus, plus,
-        [Количество отвлечений], plus, minus, minus, minus, minus, minus, minus, minus, minus,
+        [Количество отвлечений], minus, minus, minus, minus, minus, minus, minus, minus, plus,
     )
 )
 
@@ -512,24 +517,23 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             [*Функция*],
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
-        [Среднее время фокусировки], plus, minus, minus, minus, minus, minus, minus, minus, minus,
+        [Среднее время фокусировки], minus, minus, minus, minus, minus, minus, minus, minus, plus,
 
         // Блок 3: Персональная мотивация
-        [Персонализированные цитаты], plus, minus, minus, minus, minus, minus, minus, minus, minus,
-        [Умная система мотивации (AI)], plus, minus, minus, minus, minus, minus, minus, minus, minus,
+        [Персонализированные цитаты], minus, minus, minus, minus, minus, minus, minus, minus, plus,
+        [Умная система мотивации (AI)], minus, minus, minus, minus, minus, minus, minus, minus, plus,
 
         // Блок 4: Экспорт и импорт
-        [Экспорт в CSV], plus, plus, plus, plus, plus, plus, minus, plus, minus,
-        [Экспорт в Excel/XLS], plus, plus, plus, plus, plus, plus, minus, plus, minus,
-        [Экспорт в JSON], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [Экспорт в PDF], plus, plus, minus, plus, minus, plus, minus, minus, minus,
-        [Импорт из других приложений], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [Экспорт в CSV], minus, plus, plus, plus, plus, plus, minus, plus, plus,
+        [Экспорт в Excel/XLS], minus, plus, plus, plus, plus, plus, minus, plus, plus,
+        [Экспорт в JSON], minus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [Экспорт в PDF], minus, plus, minus, plus, minus, plus, minus, minus, plus,
+        [Импорт из других приложений], minus, plus, plus, plus, plus, plus, minus, minus, plus,
         // Блок 1: API и интеграции
-        [REST API], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [Webhooks], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [REST API], minus, plus, plus, plus, plus, plus, minus, minus, plus,
+        [Webhooks], minus, plus, plus, plus, plus, plus, minus, minus, plus,
     )
 )
-
 // ==================== ТАБЛИЦА 4: ИНТЕГРАЦИИ, ЭКСПОРТ, ИНТЕРФЕЙС ====================
 #figure(
     table(
@@ -540,18 +544,17 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             [*Функция*],
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
-        [Интеграция Zapier/IFTTT], plus, plus, plus, plus, plus, plus, minus, minus, minus,
-        [Email интеграция], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [Интеграция Zapier/IFTTT], minus, plus, plus, plus, plus, plus, minus, minus, plus,
+        [Email интеграция], minus, plus, plus, plus, plus, plus, minus, minus, plus,
 
         // Блок 2: Работа офлайн
-        [Полная работа офлайн], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Автосинхронизация при подключении], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Синхронизация между устройствами], plus, plus, plus, plus, plus, plus, plus, minus, minus,
+        [Полная работа офлайн], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Автосинхронизация при подключении], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Синхронизация между устройствами], minus, plus, plus, plus, plus, plus, plus, minus, plus,
 
         // Блок 3: Интерфейс и представления
-        [Представление "Список"]
-, plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Представление "Kanban доска"], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [Представление "Список"], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Представление "Kanban доска"], minus, plus, plus, plus, plus, plus, minus, minus, plus,
     )
 )
 
@@ -565,19 +568,19 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             [*Функция*],
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
-        [Представление "Календарь"], plus, plus, plus, plus, minus, plus, minus, minus, minus,
-        [Пользовательские представления], plus, plus, plus, plus, minus, plus, minus, minus, minus,
-        [Системные виджеты], plus, plus, plus, minus, plus, plus, plus, plus, minus,
-        [Quick Add функция], plus, plus, plus, minus, plus, plus, plus, plus, minus,
+        [Представление "Календарь"], minus, plus, plus, plus, minus, plus, minus, minus, plus,
+        [Пользовательские представления], minus, plus, plus, plus, minus, plus, minus, minus, plus,
+        [Системные виджеты], minus, plus, plus, minus, plus, plus, plus, plus, plus,
+        [Quick Add функция], minus, plus, plus, minus, plus, plus, plus, plus, plus,
 
         // Блок 4: Темы и оформление
         [Темная тема], plus, plus, plus, plus, plus, plus, plus, plus, plus,
-        [Светлая тема], plus, plus, plus, plus, plus, plus, plus, plus, minus,
-        [Цветная тема], plus, plus, plus, plus, minus, plus, minus, minus, minus,
-        [Покупаемые темы], plus, minus, minus, plus, minus, minus, minus, minus, minus,
+        [Светлая тема], minus, plus, plus, plus, plus, plus, plus, plus, plus,
+        [Цветная тема], minus, plus, plus, plus, minus, plus, minus, minus, plus,
+        [Покупаемые темы], minus, minus, minus, plus, minus, minus, minus, minus, plus,
 
         // Блок 5: Социальные функции
-        [Делиться в соц. сетях], plus, minus, minus, minus, minus, minus, minus, minus, minus,
+        [Делиться в соц. сетях], minus, minus, minus, minus, minus, minus, minus, minus, plus,
    
     )
 )
@@ -591,19 +594,19 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             [*Функция*],
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
-        [Комментирование задач], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [Комментирование задач], minus, plus, plus, plus, plus, plus, minus, minus, plus,
         [Коллаборация/командная работа], minus, plus, plus, plus, plus, plus, minus, minus, minus,
 
         // Блок 6: Локализация и доступность
         [Локализация русский], plus, plus, plus, plus, plus, plus, plus, plus, plus,
         [Локализация английский], plus, plus, plus, plus, plus, plus, plus, plus, plus,
-        [VoiceOver/доступность], plus, plus, plus, plus, plus, plus, minus, minus, minus,
+        [VoiceOver/доступность], minus, plus, plus, plus, plus, plus, minus, minus, plus,
 
         // Блок 7: Монетизация
-        [Бесплатная версия], plus, plus, plus, plus, plus, plus, plus, plus, minus,
+        [Бесплатная версия], minus, plus, plus, plus, plus, plus, plus, plus, plus,
         [Pro-подписка], plus, plus, plus, plus, plus, plus, plus, plus, plus,
-        [Внутриигровая валюта], plus, minus, minus, minus, minus, minus, minus, minus, minus,
-        [Магазин тем/контента], plus, minus, minus, plus, minus, minus, minus, minus, minus,
+        [Внутриигровая валюта], minus, minus, minus, minus, minus, minus, minus, minus, plus,
+        [Магазин тем/контента], minus, minus, minus, plus, minus, minus, minus, minus, plus,
     )
 )
 
@@ -616,21 +619,21 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
             [*Функция*],
             ..column_names_1.map(col => rotate(0deg, reflow: true, col))
         ),
-        [Планирование "My Day"], plus, minus, minus, minus, plus, minus, minus, minus, minus,
-        [Автоматическое предложение задач], plus, minus, minus, minus, minus, minus, minus, minus, minus,
+        [Планирование "My Day"], minus, minus, minus, minus, plus, minus, minus, minus, plus,
+        [Автоматическое предложение задач], minus, minus, minus, minus, minus, minus, minus, minus, plus,
 
         // Блок 4: Техники управления временем
         [Встроенный таймер], plus, minus, plus, minus, minus, plus, plus, minus, plus,
         [Техника Pomodoro (встроенная)], plus, minus, plus, minus, minus, plus, plus, minus, plus,
-        [Предустановленные интервалы Pomodoro], plus, minus, plus, minus, minus, plus, plus, minus, minus,
+        [Предустановленные интервалы Pomodoro], minus, minus, plus, minus, minus, plus, plus, minus, plus,
         [Фоновые звуки/белый шум], plus, minus, plus, minus, minus, minus, plus, minus, plus,
-        [Пауза в таймере (Pro)], plus, minus, minus, minus, minus, plus, minus, minus, minus,
+        [Пауза в таймере (Pro)], minus, minus, minus, minus, minus, plus, minus, minus, plus,
 
         // Блок 5: Трекер привычек
-        [Трекер привычек], plus, plus, plus, minus, minus, plus, plus, minus, minus,
+        [Трекер привычек], minus, plus, plus, minus, minus, plus, plus, minus, plus,
 
         table.cell(fill: gray.lighten(30%))[*ИТОГО*],
-        table.cell(fill: blue.lighten(60%))[*70*],
+        table.cell(fill: blue.lighten(60%))[*21*],
         table.cell(fill: blue.lighten(60%))[*43*],
         table.cell(fill: blue.lighten(60%))[*52*],
         table.cell(fill: blue.lighten(60%))[*44*],
@@ -638,7 +641,7 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
         table.cell(fill: blue.lighten(60%))[*43*],
         table.cell(fill: blue.lighten(60%))[*34*],
         table.cell(fill: blue.lighten(60%))[*25*],
-        table.cell(fill: blue.lighten(60%))[*21*],
+        table.cell(fill: blue.lighten(60%))[*70*],
     )
 )
 
@@ -847,7 +850,7 @@ OAuth 2.0 провайдеры (опционально): Google Sign-In, Apple S
 
 Разработка программного продукта должна быть завершена не позже утверждённого срока сдачи работы.
 
-Исполнители – Матусевич Дмитрий, студент ПИ ФКН НИУ ВШЭ;Михайлов Артём, студент ПИ ФКН НИУ ВШЭ; Тупицин Тимофей, студент ПИ ФКН НИУ ВШЭ; Марьин Даниил, студент ПИ ФКН НИУ ВШЭ.
+Исполнители - Матусевич Дмитрий, студент ПИ ФКН НИУ ВШЭ;Михайлов Артём, студент ПИ ФКН НИУ ВШЭ; Тупицин Тимофей, студент ПИ ФКН НИУ ВШЭ; Марьин Даниил, студент ПИ ФКН НИУ ВШЭ.
 
 
 = ПОРЯДОК КОНТРОЛЯ И ПРИЕМКИ
